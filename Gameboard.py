@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class Board:
+class Gameboard:
 
     def __init__(self):
         self.state = self.createInitialBoard()

@@ -1,5 +1,5 @@
 import numpy as np
-from Game import Board
+from Gameboard import Gameboard
 
 
 class Agent:
@@ -8,7 +8,7 @@ class Agent:
         self.q_valueTable = np.zeros((5, 10, 4))
         self.discountFactor = discountFactor
 
-    def execPolicy(self, gameboard: Board, greedy=False):
+    def execPolicy(self, gameboard: Gameboard, greedy=False):
         epsilon = 0.1
         position = gameboard.getPosition()
 
@@ -20,7 +20,7 @@ class Agent:
             else:
                 return self.q_valueTable[position].argmax()
 
-    def execAction(self, gameboard: Board, actionIndex):
+    def execAction(self, gameboard: Gameboard, actionIndex):
         if actionIndex == 0:
             gameboard.moveUp()
         elif actionIndex == 1:
@@ -30,7 +30,7 @@ class Agent:
         else:
             gameboard.moveRight()
 
-    def getReward(self, gameboard: Board):
+    def getReward(self, gameboard: Gameboard):
         status = gameboard.getGameStatus()
 
         if status == 0:

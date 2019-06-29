@@ -1,10 +1,10 @@
-import Game
+import Gameboard
 import Agent
 
 agent = Agent.Agent()
 
 for i in range(100):
-    game = Game.Board()
+    game = Gameboard.Gameboard()
 
     while game.getGameStatus() == 0:
         firstPosition = game.getPosition()
@@ -14,7 +14,7 @@ for i in range(100):
         reward = agent.getReward(game)
         agent.updateTable(firstPosition, newPosition, actionIndex, reward)
 
-game = Game.Board()
+game = Gameboard.Gameboard()
 game.showBoard()
 
 while game.getGameStatus() == 0:
