@@ -2,6 +2,10 @@
 
 An implementation of tabular Q-learning for the Cliff Walking problem as described by Richard S. Sutton and Andrew G. Barto's book "Reinforcement Learning: An Introduction" MIT Press, 2018, p. 132.
 
+## Requirement
+
+A working Python 3 implementation.
+
 ## Setup
 
 This project can be setup by cloning this repository and installing the dependencies by running
